@@ -1,5 +1,5 @@
 /*CSS Reset*/
-body, header, nav, main, footer, h1, div, img, ul, section{
+body, header, nav, main, footer, h1, div, img, ul, section, iframe{
 	margin:	0;
 	padding:	0;
 	border:	0;
@@ -67,26 +67,29 @@ main{
 	text-shadow: 5px 5px 8px #4682B4;
 	text-align: center;
 }
-.github-link{
+#github-link{
 	background-color: #87CEFA;
 	padding: 4% 6%;
 	margin: 0 auto;
 	text-align: center;
 	border-radius: 5px;
 }
-.github-link a{
+#github-url-link{
 	color: #000000;
 	text-decoration: none;
 	font-size: 1.5em;
+	font-weight: bold;
 	display: block;
 }
 main h3{
 	color: #4169E1;
 }
+/*applies to all pages(index.html, about.html & contact.html)*/
 footer{
+	max-height: 100%;
 	margin-top: 3%;
 	margin-bottom: 0;
-	padding: 0.4em 1em;
+	padding: 0.4em 0.6em;
 	background-color: #B0C4DE;
 }
 .social-icons{
@@ -97,29 +100,33 @@ footer{
 	margin-left: 30%
 }
 footer p{
-	font-size: 1.25em;
-	padding: 0 1em;
+	font-size: 1em;
+	padding: 0em 0.5em;
 }
 footer p a{
 	text-decoration: none;
 }
+
 .map{
 	display: block;	
 	border: 2px solid #4169E1;
 }
-#left-Side ul, #right-Side ul{
-	margin-left: 8%;
+/*about.html style rules*/
+#left-Side ul{
+	padding-left: 8%;
+}
+#right-Side ul{
+	padding-left: 8%;
 }
 #left-Side h3, #right-Side h3{
 	color: #000000;
 }
 
-
-/*about.html style rules */
-#website-icons{
-	width: 48px;
-	height: 48px;
-	margin-left: 8%;
+#portfolio-link{
+	padding-left: 6%;
+}
+#tech-stack-logos{
+	padding-left: 6%;
 }
 
 /*contact.html CSS rules*/
@@ -149,11 +156,47 @@ footer p a{
 	display: block;
 }
 form{
-	margin-left: 10%;
+	margin-left: 8%;
+}
+#form-call-to-action{
+	padding-top: 2%;
+}
+#form-prompt-msg{
+	color:#1E90FF;
+}
+input{
+	width: 50%;
+	border-color:#4169E1;
+	font-size: 1em;
+	border-radius: 10px; 
+	padding: 12px 12px;
+
+}
+input:focus-within{
+	outline: none;
+	border-color: #00BFFF;
+	border-width: 3px;
+}
+textarea{
+	font-size: 1.1em;
+	border-radius: 10px;
+	border-color:#4169E1;
+}
+textarea:focus-within{
+	outline: none;
+	border-color: #00BFFF;
+	border-width: 3px;
+}
+button{
+	background-color: #6495ED;
+	border-radius: 16px;
+	border-color: #4169E1;
+	width: 40%;
+	font-size: 0.9em;
+	padding: 10px 10px;
 }
 
 /*Tablet/iPad/Small Laptop CSS rules*/
-
 @media screen and (min-width: 630px){
 	/*Ensure Tablet Viewport is dispayed, and mobile style rules are off*/
 	.tablet-desktop{
@@ -188,13 +231,20 @@ form{
 	padding: 1% 2%;
 	font-size: 1.2em;
 	}
-	#hero img{
+	/*#hero img{ 
 		max-width: 100%;
 		display: block;
+	}*/
+	#hero iframe{
+		width: 100%;
+		height: 70vh;
+		display: block;
+		border-radius: 5px;
 	}
-	#hero{ 
+	#hero{
 		object-fit: contain;
 	}
+
 	.bio-profile{
 		margin: 4% auto;
 		padding: 1% 2%;
@@ -220,11 +270,12 @@ form{
 	/*footer*/
 	footer{
 		clear: left;
-		margin-top: 3%; 
-		height: 130px; 
+		margin-top: 3%;
+		/*max-height: 100%;*/ 
+		height: 140px; 
 	}
-	#address li {
-	margin-left: 2%;
+	#physical-address{
+	margin-left: 4%;
 	}
 	#address,#social-links{
 		float: left;
@@ -242,8 +293,9 @@ form{
 		display: block;
 		margin: 4% auto;
 	}
-	/*about_us CSS rules*/
+	/*about us CSS rules*/
 	#topSide{
+		width: 86%;
 		clear: left;
 		font-size: 1em;
 		margin-left: 1%; 
@@ -260,6 +312,9 @@ form{
 	}
 	#left-Side{
 		margin-left: 5%;
+		background-color: #F0FFFF;
+		padding: 1% 1% 0 1%;
+		border-radius: 15px;
 	}
 	#left-Side h1, #left-Side h2{
 		margin: 0 0 2% 0;
@@ -275,24 +330,53 @@ form{
 		margin-bottom: 2%;
 	}
 	#right-Side{
-		padding-left: 10%;
+		background-color: #2F4F4F;
+		padding: 1% 1% 1% 1%;
+		border-radius: 15px;
+		margin-bottom: 1%;
+		box-shadow: 3px 3px 6px #000;
 	}
-	#right-Side h2, #right-Side h4{
+	#right-Side h1{
+		color: #fff;
+	}
+	#right-Side h2,#right-Side h3,#right-Side h4{
+		color: #FAFAFA;
 		margin: 2% 1% 0 2%;
 	}
-	#right-Side ul{
-		margin-bottom: 2%;
-	}
 	#right-Side p{
+		padding: 2% 1% 0 2%;
+		color: #778899;
 		margin: 2% 0;
 	}
+	#right-Side ul{
+		color: #A9A9A9;
+		padding-left: 10%;
+		margin-bottom: 2%;
+	}
+	#left-Side li, #right-Side li{
+		list-style-type: circle;
+	}
 	/*contact.html CSS rules*/
-	#contact p{
+	#contact{
 		text-align: left;
 		padding-left: 10%;
 	}
+	#call-to-action{
+		width:90%;
+	}
 	form{
-		margin-left: 15%;
+		margin-left: 0 ;
+	}
+	input{
+	width: 25%;
+	padding: 10px 10px;
+	}
+	button{
+	width: 18%;		
+	}
+	button:hover{
+		opacity: 60%;
+		cursor: pointer;
 	}
 }/*end of Tablet/iPad view port*/
 
@@ -304,6 +388,7 @@ form{
 	header{
 	width: 25%;
 	float: left;
+	margin-bottom: 1%;
 	}
 	header img{
 		margin: 0;
@@ -313,6 +398,7 @@ form{
 	width: 70%;
 	float: right;
 	margin: 0;
+	padding-top: 2em;
 	}
 	nav li{ /*override CSS rules for Tablet-Viewport*/
 		border: none;
