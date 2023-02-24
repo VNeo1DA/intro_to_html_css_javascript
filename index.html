@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +8,13 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="process_txt.js" defer></script>
+		<script type="text/javascript" src="raw_txt.js" defer></script>
 	</head>
 
 	<body>
 		<div id="container">
-			<!--Use header area for webiste name or logo -->
-			
+		<!--This is our head section and it will encompass our logo and navigation bar -->
 			<header>
 			<a href="#">
 				<img src="logos/porfolio-web-logo.png" alt="Vuyo's logo">
@@ -30,31 +31,28 @@
 
 			<main>
 				<div class="mobile">
-					<h2>Hi</h2>
-					<p>
-						Welcome to my portfolio website, my primary goal is to apply the technical knowledge I gained from University in a real world environment. Having been exposed to technologies such as C++, CSS, HTML, JavaScript, Oracle and  Python, I am seeking entry level training and skill building opportunities such as junior developer or internship programme to help build my skills and grow within the Information Technology sector.
+					<h2 id="mobile-opening-header"></h2>
+					<p id="mobile-bio-1"></p>
+					<p id="mobile-bio-2"></p>
+					<h3 id="mobile-closing-header"></h3>
+					<p id="github-link">
+						<a href="https://github.com/VNeo1DA" id="github-url-link"></a>
 					</p>
-					<p>
-						I am a recent BSc Informatics graudatue with a keen interest on becoming a full stack web developer. I am someone who is analytical, discovery-oriented, tenacious, eager to learn and an excellent communicator
-					</p>
-					<h3>Please visit my github account to see samples of my work</h3>
-					<p class="github-link">
-						<a href="https://github.com/VNeo1DA">github.com/VNeo1DA</a></p>
 				</div>
-				
+
 				<div id="hero" class="tablet-desktop">
-					<img src="images/programming.jpg" alt="internet programming code">
-				</div>
+					<iframe 
+						src="https://www.youtube.com/embed/MilWFzzTaSo?autoplay=1&mute=1">
+					</iframe>
+					<!--<img src="images/programming.jpg" alt="internet programming code"> -->
+				</div>				
+
 				<div class="tablet-desktop">
 					<div class="bio-profile">
 							<section id="bio-info">
-								<h1>Vuyo Neo Mamabolo</h1>
-								<p>BSc Informatics graduate with knowledge in C++, CSS, HTML, 
-								JavaScript and Python Programming Languages
-								</p>
-								<p>
-									Highly analytical, strong communication skills, discovery oriented, eager to learn new skills, applications and knowledge.
-								</p>
+								<h1 id="full-name"></h1>
+								<p id="bio-info1"></p>
+								<p id="bio-info2"></p>
 							</section>
 
 							<section id="profile-pic">
@@ -65,26 +63,10 @@
 			</main>
 
 			<footer>
-				<!--address comes here -->
 				<div id="address">
-						<p>No 35 Hull Road,<br> Vrededorp,<br> Johannesburg</p>
+						<p id="physical-address"></p>
 				</div>
 				<div id="social-links">
-					<table>
-						<tr>
-							<td>
-							<p><a 
-								href="https://www.linkedin.com/in/neo-vuyo-mamabolo-617b94182">
-								<img src="icons/linkedin.png" class="social-icons" alt="linkedin icon">
-							</a></p>
-							</td>
-							<td>
-							<p><a href="#">
-								<img src="icons/facebook.png" class="social-icons" alt="facebook icon">
-							</a></p>
-							</td>
-						</tr>
-					</table>
 				</div>
 				<div id="embedded-map">
 					<!--Embedded Map-->
