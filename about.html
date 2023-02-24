@@ -3,15 +3,18 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Vuyo's Resume</title>
+		<title>Vuyo's Portfolio Web</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="process_txt.js" defer></script>
+		<script type="text/javascript" src="raw_txt.js" defer></script>
 	</head>
 
 	<body>
 		<!--This is our header and it will encompass our logo and navigation bar -->
+		<div id="container">
 			<header>
 			<a href="index.html">
 				<img src="logos/porfolio-web-logo.png" alt="Vuyo's logo">
@@ -27,128 +30,47 @@
 			</nav>
 
 			<main>
-					<div id="topSide">
-						<h1>Attributes/Objectives:</h1>
-						<p>Hardworking, knowledgeable and discovery-oriented with a 
-						passion for technology. Having acquired communication, 
-						time-management and organizational skills, I wish to 
-						further augment my skills with software development and 
-						grow within the Information and Communication Technology (ICT) 
-						sector. I am also very keen to work within a team environment 
-						and help deliver better results as part of a collective.</p>
-					</div>
+				<div id="topSide">
+					<h1>Attributes/Objectives:</h1>
+					<p id="attributes"></p>
+				</div>
 
-					<div class="left-and-right-Sections">
-						<section id="left-Side">
-							<h1>Education:</h1>
-							<h2>UNISA</h2>
-							<h3>BSc Informatics</h3>
-							<h4>Key Modules</h4>
-							<ul>
-								<li>Business Information Systems</li>					
-								<li>Computer Networks</li>
-								<li>Programming</li>
-								<li>System Design and Analysis</li>
-								<li>Databases</li>
-							</ul>
-
+				<div class="left-and-right-Sections">
+					<section id="left-Side">
+						<div id="tertiary-school">
+							<h1 id="edu-title">Education:</h1>
+						</div>
+						<div id="computer-literacy">
 							<h1>Computer Literacy:</h1>
-							<ul>
-								<li>Microsoft Office</li>
-								<li>Windows XP, 7, 8, 10, 11</li>
-								<li>Statistical Analysis Software (SAS)</li>
-							</ul>
+						</div>
+						<div id="technology-stack">
 							<h1>Programming:</h1>
-							<h3>Knowledgeable in:</h3>
-							<ul>
-								<li>C++</li>
-								<li>CSS</li>
-								<li>HTML</li>
-								<li>Javascript</li>
-								<li>Python</li>							
-							</ul>
+						</div>
+						<div id="ide-dbms">
 							<h1>IDEs & DBMS</h1>
-								<ul>
-									<li>Netbeans</li>
-									<li>Oracle</li>
-									<li>Sublime Text</li>						
-								</ul>
+						</div>
+						<div id="project-links">
 							<h1>Links/Projects:</h1>
-							<p><a href="https://github.com/VNeo1DA">
-								<img 
-								src="icons/github.png" 
-								id="website-icons"
-								alt="github-logo">
-							</a></p>
-						</section>
-
-						<section id="right-Side">
-							<h1>Work Experience</h1>
-							<h2>Shell:</h2>
-							<h4>01/2018 – 12/2018</h4>
-							<p>Responsibilities:</p>
-							<ul>
-								<li>updating and transcribing petrochemical stats onto database
-								</li>
-								<li>filing, creation of MS PowerPoint presentations</li>
-								<li>data capturing</li>
-							</ul>
-
-							<h2>SABC: Media Intern (Volunteer)</h2>
-							<h4>04/2017 – 06/2017</h4>
-							<p>Responsibilities:</p>
-							<ul>
-								<li>assisted media strategists in creation of advertising reports</li>
-								<li>creation of MS PowerPoint presentations</li>
-							</ul>
-
-							<h2>SABC: Media Intern</h2>
-							<h4>04/2016 – 03/2017</h4>
-							<p>Responsibilities:</p>
-							<ul>
-								<li>creation of advertising reports</li>
-								<li>creation of MS PowerPoint presentations</li>
-								<li>data collation</li>
-							</ul>
-
-							<h2>Queens Park: Retail Sales-Assistant (Vocational)</h2>
-							<h4>12/2015 – 01/2016</h4>
-							<p>Responsibilities:</p>
-							<ul>
-								<li>assisted store sales associates with opening clothing accounts
-								</li>
-								<li>sustaining good customer service levels</li>
-							</ul>
-						</section>
-					</div>
+						</div>
+					</section>
+					<section id="right-Side">
+						<h1>Work Experience:</h1>
+					</section> 
+				</div>
 
 			</main>
 			<footer>
-				<!--address comes here -->
 				<div id="address">
-						<p>No 35 Hull Road,<br> Vrededorp,<br> Johannesburg</p>
+						<p id="physical-address"></p>
 				</div>
 				<div id="social-links">
-					<table>
-						<tr>
-							<td>
-							<p><a 
-								href="https://www.linkedin.com/in/neo-vuyo-mamabolo-617b94182">
-								<img src="icons/linkedin.png" class="social-icons" alt="linkedin icon">
-							</a></p>
-							</td>
-							<td>
-							<p><a href="#">
-								<img src="icons/facebook.png" class="social-icons" alt="facebook icon">
-							</a></p>
-							</td>
-						</tr>
-					</table>
 				</div>
 				<div id="embedded-map">
 					<!--Embedded Map-->
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d896.298996747922!2d28.085197335523635!3d-26.027142695674765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95732293c5e36f%3A0x9b7f0a3045d61d10!2sThe%20Polofields%20Lifestyle%20Estate%20-%20Balwin%20Properties!5e0!3m2!1sen!2sza!4v1668077142821!5m2!1sen!2sza" width="180" height="100"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"	class="map"></iframe>
 				</div>
 			</footer>
+
+		</div>
 	</body>
 </html>
