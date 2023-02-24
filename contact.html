@@ -3,15 +3,18 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Vuyo's Resume</title>
+		<title>Vuyo's Portfolio Web</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="process_txt.js" defer></script>
+		<script type="text/javascript" src="raw_txt.js" defer></script>
 	</head>
 
 	<body>
 		<!--This is our header and it will encompass our logo and navigation bar -->
+		<div id="container">
 			<header>
 			<a href="index.html">
 				<img src="logos/porfolio-web-logo.png" alt="Vuyo's logo">
@@ -28,90 +31,79 @@
 
 			<main>
 				<div id="contact">
-					<h2>Getting in touch with me is easy</h2>
-					<p>
-						You can contact me through the number or email address listed below, alternatively you can fill in your details and I will get back to you as soon as possible
-					</p>
+					<h2 id="contact-Head">Getting in touch with me is easy
+					</h2>
+					<p id="call-to-action"></p>
 					<h4 class="mobile tel-link">
-						<a href="tel:0793209844">(079)320-9844</a>
+						<a 
+						href="tel:0793209844" 
+						id="cell-num-mobi">
+						</a>
 					</h4>
-					<h4 class="tablet-desktop tel-num">(079)320-9844</h4>
-					<h4>Email:  <a href="mailto: vuyomamabolo@gmail.com" class="contact-email-link">vuyomamabolo@gmail.com</a></h4>
-					<h4>
-						My current location is:<br> Vrededorp, Johannesburg, Gauteng - 2141
+					<h4 class="tablet-desktop tel-num" id="cell-num-desktop"></h4>
+					<h4 id="contact-email-header">
+						<a href="#" id="electronic-mail"></a>
 					</h4>
+					<h4 id="current-location"></h4>
 
-					<h4>
-						Should you wish for me to contact you please provide your details below
-					</h4>
+					<h4 id="form-call-to-action"></h4>
 					<!--form input comes here-->
-					<form action="#" method="POST">
+					<form action="https://formspree.io/f/xqkoqnve" method="POST">
 						<div class="tableRow">
-							<p id="form-header">
-								Please fill in the required information:
-							</p>
+							<p id="form-prompt-msg"></p>
 							<p></p>
 						</div>
 						<div class="tableRow">
-							<p>Full Name: </p>
+							<p id="form-name-title"></p>
 						 	<p>
 						 		<input 
 						 			type="text" 
-						 			name="" 
+						 			name="full-name" 
 						 			value="" 
-						 			placeholder="Enter Name">
+						 			placeholder="Enter Your Full Name" 
+						 			autocomplete="off"
+						 			required>
 						 	</p>
 						 </div>
 						 <div class="tableRow">
-						 	<p>e-mail: </p>
+						 	<p id="form-email-title"></p>
 						 	<p><input 
 						 		type="email" 
-						 		name="" 
+						 		name="email" 
 						 		value=""
-						 		placeholder="Enter e-mail">
+						 		placeholder="Enter My e-mail" 
+						 		autocomplete="off"
+						 		required>
 						 	</p>
 						 </div>
 						 <div class="tableRow">
-						 	<p>Message:</p>
+						 	<p id="form-message-box"></p>
 						 	<p>
-						 		<textarea name="message" rows="16" cols="48"></textarea>
+						 		<textarea name="message" rows="16" cols="50" required></textarea>
 							</p>
 						</div>
 						<div class="tableRow">
 							<p></p>
-							<p> <input type="submit" name="" value="send details"> </p>
+							<p> 
+								<button type="submit">Send Details</button>
+							</p>
 						</div>
 					</form>
 
 				</div>
 			</main>
 			<footer>
-				<!--address comes here -->
 				<div id="address">
-						<p>No 35 Hull Road,<br> Vrededorp,<br> Johannesburg</p>
+						<p id="physical-address"></p>
 				</div>
 				<div id="social-links">
-					<table>
-						<tr>
-							<td>
-							<p><a 
-								href="https://www.linkedin.com/in/neo-vuyo-mamabolo-617b94182">
-								<img src="icons/linkedin.png" 
-								class="social-icons" alt="linkedin icon">
-							</a></p>
-							</td>
-							<td>
-							<p><a href="#">
-								<img src="icons/facebook.png" class="social-icons" alt="facebook icon">
-							</a></p>
-							</td>
-						</tr>
-					</table>
 				</div>
 				<div id="embedded-map">
 					<!--Embedded Map-->
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d896.298996747922!2d28.085197335523635!3d-26.027142695674765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95732293c5e36f%3A0x9b7f0a3045d61d10!2sThe%20Polofields%20Lifestyle%20Estate%20-%20Balwin%20Properties!5e0!3m2!1sen!2sza!4v1668077142821!5m2!1sen!2sza" width="180" height="100"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"	class="map"></iframe>
 				</div>
 			</footer>
+
+		</div>
 	</body>
 </html>
